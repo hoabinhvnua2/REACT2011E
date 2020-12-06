@@ -27,3 +27,11 @@
 3. các bước thực hiện việc commit code từ local lên repo
     B1: git status
     B2: git add
+    B3: git commit -m "nội dung cần coomit"
+    B4: git push origin master
+4. các bước clone repo trên internet và local
+    B1: vào nơi dùng để lưu trữ repo trên local
+    B2: mở git bash here
+    B3: copy link repo
+    B4: git clone <link từ B3>
+5. các bước tạo ra 1 nhánh mới
