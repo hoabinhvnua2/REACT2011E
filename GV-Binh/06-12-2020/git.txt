@@ -27,3 +27,4 @@
 3. các bước thực hiện việc commit code từ local lên repo
     B1: git status
     B2: git add
+utr
