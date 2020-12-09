@@ -1,1 +1,3 @@
-EM CHƯA RÕ VỀ CÁCH MER CODE 
+ 1 . Giới thiệu làm quen .
+ 2 . Học về Git .
+ 
