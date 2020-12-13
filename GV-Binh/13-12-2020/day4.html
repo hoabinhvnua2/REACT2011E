@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-color-red {
+            color: red;
+        }
+
+        .custom-fz-13 {
+            font-size: 13px;
+        }
+
+        #userName {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Tôi xin chào các bạn</p><p class="custom-color-red">lớp React</p>
+    
+
+    <span> tôi tên là: </span>
+    <span class="custom-color-red custom-fz-13 custom-boder">THB</span>
+    <p id="userName">tôi là sinh viên</p>
+
+
+    <canvas id="myCanvas" width="300" height="300" style="border: 1px solid green"></canvas>
+
+
+    <p>ví dụ về SVG:</p>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+
+    <p>ví dụ về Form: </p>
+    <form action="" target="" method="">
+        <label for="">Type text: </label>
+        <input type="text" placeholder="user name" id="userName">
+        <br>
+        <label for="">Type nuber</label>
+        <input type="number" name="" id="">
+        <br>
+        <label for="">Type password</label>
+        <input type="password" name="" id="">
+        <br>
+        <label for="">Type email:</label>
+        <input type="email" name="" id="">
+        <br>
+        <label for="">Type date</label>
+        <input type="date" name="" id="">
+        <br>
+        <label for="">Type textarea</label>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+        <br>
+        <label for="">Type color</label>
+        <input type="color" name="" id="">
+        <br>
+        <label for="">Type button</label>
+        <input type="button" value="Thêm mới" style="background: blue">
+        <br>
+        <label for="">Type submit</label>
+        <input type="submit" value="Lưu lại">
+        <br>
+        <label for="">Type checkbox</label>
+        <input type="checkbox" name="react" id="" value="React">
+        <input type="checkbox" name="angular" id="" value="Angular">
+        <input type="checkbox" name="vue" id="" value="Vue js">
+        <br>
+        <label for="">Type radio</label>
+        <input type="radio" name="gender" id="" value="Nam">
+        <input type="radio" name="gender" id="" value="Nữ">
+        <br>
+        <label for="">Type select</label>
+        <select name="" id="">
+            <option value="react">React</option>
+            <option value="angular">Angular</option>
+            <option value="vue">Vue js</option>
+        </select>
+        <br>
+        <label for="">Tag button</label>
+        <button type="button">Xóa đi</button>
+        <br>
+        <fieldset>
+            <legend>Đăng ký tài khoản:</legend>
+            <label for="fname">Họ:</label><br>
+            <input type="text" id="fname" name="fname" value="" placeholder="Nhập họ"><br>
+            <label for="lname">Tên name:</label><br>
+            <input type="text" id="lname" name="lname" value="" placeholder="Nhập tên"><br><br>
+            <input type="submit" value="Đăng ký">
+        </fieldset>
+        <br>
+        <label for="">Tag output</label>
+        <br>
+        <output name="">tổng số là: 20</output>
+
+        <br>
+        <label for="">Tag datalisst</label>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </form>
+
+    <br>
+    <label for="">Insert Video</label>
+    <video width="400" height="300" controls>
+        <source src="./ASSIGMENT 2.mp4" type="video/mp4">
+    </video>
+    <br>
+    <label for="">Insert audio</label>
+    <audio controls>
+        <source src="" type="audio/mp3">
+    </audio>
+
+    <br>
+    <label for="">Insert video in youtube</label>
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/60nIVKzylLQ">
+    </iframe> 
+    <script>
+        // line
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.moveTo(0,0);
+        // ctx.lineTo(200,100);
+        // ctx.stroke();
+
+        // chữ
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.font = "30px Arial";
+        // ctx.fillText("React",10,50);
+
+        //hình tròn
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+    </script>
+</body>
+</html>
