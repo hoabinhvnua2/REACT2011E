@@ -1,1 +1,2 @@
-test hihi
+- Kiến thức html, css: nắm được phần cơ bản.
+- Kiến thức js: bị mất căn bản => cải thiện hoàn toàn kiến thức js.
