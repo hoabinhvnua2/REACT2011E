@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form HTML Register</title>
+    <style>
+        div {
+            margin-top: 10px;
+        }
+        .dangNhap{
+            width: 30%;
+        }
+        div.group{
+            display: flex;
+        }
+        label{
+            width: 25%;
+        }
+        input.txt {
+            width: 55%;
+        }
+        div.sub{
+            margin-left: 65%;
+        }
+        .rem{
+            width: 55%;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="dangNhap">
+        <fieldset id="login">
+            <legend>LOGIN</legend>
+            <form action="">
+                <div class="group">
+                    <label for="userName">User Name:</label>
+                    <input id="userName" class="txt" type="text" placeholder="myphuoc1101">
+                </div>
+                <div class="group">
+                    <label for="password">Password:</label>
+                    <input id="password" class="txt" type="password">
+                </div>
+                <div class="rem">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <div class="sub">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
