@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .info {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0px;
+        }
+
+        #login {
+            width: 25%;
+        }
+
+        #sigup {
+            width: 25%;
+        }
+
+        .form-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .check-remember{
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    
-    <table>
-        <thead>
-            <th>
-                STT
-            </th>
-            <th>
-                Giá
-            </th>
-            <th>
-                Tên Sản Phẩm
-            </th>
-            <th>
-                Đánh Giá
-            </th>
-        </thead>
-    </table>
+    <h3 class="title">
+        Form Điền Thông Tin Khách Hàng
+    </h3>
+    <div class="info">
+        <fieldset id="login">
+            <legend>Đăng Ký</legend>
+            <form action="">
+                <div class="form-group">
+                    <label for="fistName">Họ:</label>
+                    <input id="fistName" type="text" placeholder="Trần">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Tên:</label>
+                    <input id="lastName" type="text" placeholder="Phúc">
+                </div>
+                <div class="form-group">
+                    <label for="userName">UserName</label>
+                    <input id="userName" type="text" placeholder="sangmui123">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password">
+                </div>
+                <div class="form-btn">
+                    <button type="submit">Đăng Ký</button>
+                </div>
+            </form>
+        </fieldset>
+        <fieldset id="sigup">
+            <legend>Đăng Nhập</legend>
+            <form action="">
+                <div class="form-group">
+                    <label for="fistName">UserName</label>
+                    <input id="fistName" type="text" placeholder="sangmui123">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password">
+                </div>
+                <div class="check-remember">
+                    <input type="checkbox">
+                    <label for="remember">Ghi Nhớ</label>
+                </div>
+                <div class="form-btn">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
 </body>
+
 </html>
