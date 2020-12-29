@@ -1,0 +1,42 @@
+flex là gì? và có những thuộc tính nào?
+
+- flex nó được định nghĩa là 1 flex container, inline hoặc block
+    cú pháp:
+    display: flex;
+
+- flex-direction:  quy định chiều hiển thị (chiều ngang và chiều dọc)
+    + row: hàng ngang
+    + row-reverse: hiển thị hàng ngang nhưng bị đảo ngược
+    + column: hàng dọc
+    + column-reverse: hàng dọc bị dảo ngược
+- flex-wrap: dùng để wrap các item trên 1 dòng
+    + nowrap(default): ko wrap các item lại với nhau
+    + wrap: wrap các item lại với nhau
+    + wrap-reverse: wrap các item lại nhưng đảo ngược
+- flex-grow: nó sẽ lấy toàn bộ khoảng trống còn lại để bồi đắp vào cho các item
+- flex-shink: giúp các item co lại theo kích thước màn hình
+- flex-basic: dùng để quy định size cho các item, sử dụng các đơn vị như %, rem, px ...
+- flex: wrap 3 thuộc flex-grow, flex-shrink, flex-basic;
+- justify-content: quy định hiển thị theo chiều ngang
+    + flex-start: nó hiển thị bên trái
+    + flex-end: nó hiển thị bên phải
+    + center: giữa
+    + space-between: căn đều ở giữa
+    + space-around: căn đều hai bên trai, phải
+- align-item: quy định vị trí hiển thị các item theo chiều dọc
+    + stretch:(default) giúp các item hiển thị bằng độ cao của container
+    + flex-start: vị trí hiển thị ở trên top
+    + flex-end: vị trí hiển thị ở dưới bottom
+    + center: ở giữa
+    + baseline: căn theo nội dung bên trong item
+- align-content: quy định hiển thị theo chiều dọc
+    + flex-start: nó hiển thị bên trái
+    + flex-end: nó hiển thị bên phải
+    + center: giữa
+    + space-between: căn đều ở giữa
+    + space-around: căn đều hai bên trai, phải
+- align-self: cho phép 1 item nào đó được hiển thị tại vị trí khác
+    + flex-start:
+    + flex-end:
+    + center: 
+- order: giúp sắp xép lại vị trí các item;
