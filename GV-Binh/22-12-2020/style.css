@@ -1,0 +1,36 @@
+.text-yellow {
+  color: yellow;
+}
+
+.custom-child {
+    max-width: 500px;
+    position: relative;
+}
+
+.custom-style {
+    background-color: grey;
+    /* background-image: ; */
+
+    border: 1px solid green;
+    margin: 10px 5px 20px;
+    /* margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px; */
+    padding: 5px;
+    /* auto và 100% */
+
+    height: auto;
+    
+}
+
+.custom-one {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    top: 0;
+    /* right: ;
+    left: ;
+    bottom: ; */
+}
