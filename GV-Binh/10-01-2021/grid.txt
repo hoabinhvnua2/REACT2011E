@@ -1,0 +1,89 @@
+Flex: dùng để chia layout theo 1 chiều(hoặc là chiều ngang hoặc là chiều dọc). hướng đến xây dựng layout cho nội dung
+
+grid: thì chia layout theo cả ngang và dọc, chia layout theo dạng vùng chứa lưới
+để layout hiển thị theo dạng lưới bạn cần có key:  display: grid;
+Đơn vị mới của grid
+1fr 1fr 1fr 1fr = 4fr
+1fr = 1fr/4fr
+
+Tìm hiểu về từng thuộc tính của grid:
+- grid-template-columns: chia bố cục layout theo chiều ngang
+- grid-template-rows: chia bố cục layout theo chiều dọc7777777
+
+- grid-column-start: vị trí bắt đầu của 1 khối trên line dọc 
+- grid-column-end: vị trí kết thúc của 1 khối trên line dọc 
+
+- grid-row-start: vị trí bắt đầu của 1 khối trên line ngang
+- grid-row-end: vị trí kết thúc của 1 khối trên line ngang
+
+- grid-column: gộp của grid-column-start / grid-column-end 
+- grid-row: gộp của grid-row-start / grid-row-end
+
+- grid-area: 
+    + viết gộp grid-row-start / grid-colum-start / grid-row-end / grid-column-end
+    + với name: quy định nam cho các item
+
+- grid-template-area: dùng kết hợp với với grid-area để chia layout theo name
+
+- grid-template: là các viết nhanh gộp grid-template-rows / grid-template-columns
+
+- column-gap: tạo ra 1 khoảng trắng giữa các cột với nhau
+- column-row: tạo ra 1 khoảng trắng giữa các hàng với nhau
+- gap: gộp của row-gap column-gap (không sử dụng kiểu phân số)
+
+
+- justify-self: quy định vị trí của 1 item cụ thể theo trục x
+    + start: vị trí bắt đầu
+    + end: vị trí kết thúc
+    + center: vị trị chính giữa
+    + stretch: full span (default)
+- align-self: quy định vị trí của 1 item cụ thể theo trục y
+    + start: vị trí bắt đầu
+    + end: vị trí kết thúc
+    + center: vị trị chính giữa
+    + stretch: full span (default)
+- place-self: gộp của align-self / justify-self (không sử dụng kiểu phân số)
+
+
+- justify-items: quy định vị trí của các item theo trục x
+    + start: vị trí bắt đầu
+    + end: vị trí kết thúc
+    + center: vị trị chính giữa
+    + stretch: full span (default)
+- align-items: quy định vị trí của các item theo trục y
+    + start: vị trí bắt đầu
+    + end: vị trí kết thúc
+    + center: vị trị chính giữa
+    + stretch: full span (default)
+- place-items: gộp của align-item / justify-item (không sử dụng kiểu phân số)
+
+- justify-content: quy định vị trí của grid-container theo trục x
+    + start: vị trí bắt đầu
+    + end: vị trí kết thúc
+    + center: vị trị chính giữa
+    + stretch: full span (default)
+    + space-around:
+    + space-between:
+    + space-evenly: 
+- align-content: quy định vị trí của grid-container theo trục y
+      + start: vị trí bắt đầu
+    + end: vị trí kết thúc
+    + center: vị trị chính giữa
+    + stretch: full span (default)
+    + space-around:
+    + space-between:
+    + space-evenly: 
+- place-items: gộp của align-content / justify-content (không sử dụng kiểu phân số)
+
+- grid-atuo-columns: tự động lấy kích thước column của các item để thêm các span cho phù hợp với vị trí hiển thị mới của item
+- grid-auto-rows: tự động lấy kích thước row của các item để thêm các span cho phù hợp với vị trí hiển thị mới của item
+
+- grid-auto-flow: nó quy định chiều hướng hiển thị các item
+    + row: hiển thị theo hàng ngang ( trục x)
+    + cloumn: hiển thị theo7 chiều dọc (trục y)
+    + dense: tìm các item còn lại có vị trí phù hợp với khoảng trống đang bị bỏ, nó phá vỡ thứ tự gủa các item
+
+
+buổi học tới sẽ học javascript
+    tìm hiểu về javascript: cách viets javascript trong file html
+    hiển thị text ra màn hình console,
