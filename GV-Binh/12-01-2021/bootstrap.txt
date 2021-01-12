@@ -1,0 +1,5 @@
+bootstrap là 1 framework css, dùng để xây dựng layout responsive
+các phần quan trọng nhất của bootstrap:
+    - grid - layout
+    - component
+    - ultiliti

@@ -1,0 +1,16 @@
+javascript: là một ngôn ngữ kịch bản, mục tiêu ban đầu là họ muốn làm cho trang web động.
+javascript(js) khác hoàn toàn với java
+- javascript nó đi theo hướng function
+
+- cách sử dụng js trong html
+    + internal js
+    + external js
+- chú ý: ko nên đặt cặp thẻ script trong thẻ head
+
+- js có các từ khóa để khai báo biến là: var, let, const
+    + function scope: khơi tại và sử dụng biến trong giới hạn của function đó
+    + block scope: 
+- hoisting: trong js nếu 1 biên chưa đc khái báo nhưng lại được sử dụng thì nó tự động khai báo biến đó ở global
+- not defined: là biến đó mình chưa khai báo(tức là nó chưa tồn tại)
+- undefined: tức là đã khai báo biến rồi nhưng biến đó chưa có giá trị
+- chú ý: không bao giờ được đặt tên biến là chữ 'name'
