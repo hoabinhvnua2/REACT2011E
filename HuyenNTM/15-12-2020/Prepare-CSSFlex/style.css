@@ -1,0 +1,46 @@
+/* css flex
+/** Global CSS **/
+.container {
+  background: red;
+  max-width: 960px;
+  max-height: 1000px;
+  margin: 0 auto;
+  padding: 5px;
+ }
+
+ .item {
+  background: blue;
+  margin: 5px;
+  color: white;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+ }
+
+ /** Flex layout **/
+.container {
+  display: flex;
+}
+
+.item{
+  width: 50px;
+}
+
+.f-grow-1{
+  flex-grow: 1;
+}
+
+.f-grow-2{
+  flex-grow: 2;
+}
+
+.f-shink-1{
+  flex-shrink: 1;
+}
+
+.f-shink-2{
+  flex-shrink: 10;
+} */
+
+
+/* css grid */
