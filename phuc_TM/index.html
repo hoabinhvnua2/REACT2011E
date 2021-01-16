@@ -6,91 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .info {
-            display: flex;
-            justify-content: space-around;
-
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-
-        .title {
-            text-align: center;
+        
+        .h-50px {
+            height: 50px;
         }
-
-        .form-group {
+        
+        .h-100px {
+            height: 100px;
+        }
+        
+        .f-grow {
+            flex-grow: 1;
+        }
+        
+        .f-grow-3 {
+            flex-grow: 3;
+        }
+        
+        .mr {
+            margin-right: 5px;
+        }
+        
+        .mt {
+            margin-top: 5px;
+        }
+        
+        .row-2-container {
             display: flex;
             justify-content: space-between;
-            margin: 10px 0px;
         }
-
-        #login {
-            width: 25%;
-        }
-
-        #sigup {
-            width: 25%;
-        }
-
-        .form-btn {
+        
+        .row-3-container {
             display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .check-remember{
-            text-align: center;
+            justify-content: space-between;
         }
     </style>
 </head>
 
 <body>
-    <h3 class="title">
-        Form Điền Thông Tin Khách Hàng
-    </h3>
-    <div class="info">
-        <fieldset id="login">
-            <legend>Đăng Ký</legend>
-            <form action="">
-                <div class="form-group">
-                    <label for="fistName">Họ:</label>
-                    <input id="fistName" type="text" placeholder="Trần">
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Tên:</label>
-                    <input id="lastName" type="text" placeholder="Phúc">
-                </div>
-                <div class="form-group">
-                    <label for="userName">UserName</label>
-                    <input id="userName" type="text" placeholder="sangmui123">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input id="password" type="password">
-                </div>
-                <div class="form-btn">
-                    <button type="submit">Đăng Ký</button>
-                </div>
-            </form>
-        </fieldset>
-        <fieldset id="sigup">
-            <legend>Đăng Nhập</legend>
-            <form action="">
-                <div class="form-group">
-                    <label for="fistName">UserName</label>
-                    <input id="fistName" type="text" placeholder="sangmui123">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input id="password" type="password">
-                </div>
-                <div class="check-remember">
-                    <input type="checkbox">
-                    <label for="remember">Ghi Nhớ</label>
-                </div>
-                <div class="form-btn">
-                    <button type="submit">Login</button>
-                </div>
-            </form>
-        </fieldset>
+    <div class="container">
+        <div style="background-color: brown;" class="row-1 h-50px">
+        </div>
+        <div class="row-2-container h-100px mt">
+            <div style="background-color:red" class="row-2-item mr f-grow"></div>
+            <div style="background-color:yellow" class="row-2-item mr f-grow"></div>
+            <div style="background-color:blue" class="row-2-item mr f-grow "></div>
+            <div style="background-color:green" class="row-2-item  f-grow"></div>
+        </div>
+        <div class="row-3-container h-100px mt">
+            <div style="background-color: aqua" class="row-3-item mr f-grow-3"></div>
+            <div style="background-color:yellowgreen" class="row-3-item f-grow"></div>
+        </div>
     </div>
 </body>
+<script>
+    let kgMinh = 52,
+        heightMinh = 180;
+    let KGtoan = 53,
+        heightToan = 170;
+    let bmiMinh = kgMinh / (heightMinh * heightMinh);
+    let bmiToan = KGtoan / (heightToan * heightToan);
+    if (bmiMinh > bmiToan) {
+        console.log('bạn minh toàn')
+    } else {
+        console.log('bạn toàn nặng hơn minh')
+    }
+
+    // Bài tập về nhà: 
+        // Tạo biến và tính diện tích or chu vi or cả hai hình vuông, chữ nhật, hình tròn, tam giác. và hiển thị
+        // dienj tích ra màn hình console.
+    //bt1: Tính diện tích tính hình vuông
+    function sVuong(a){
+        let s = a * a;
+        return s;
+    }
+    console.log(`Diện tích hình vuông là : ${sVuong(5)}`);
+    //bt2: Tính diện tích tính hình chữ nhật
+    function sChuNhat(a,b){
+        let s = a * b 
+        return s 
+    }
+    console.log(`Diện tích hình chữ nhật là : ${sChuNhat(5,2)}`);
+    //bt3: Tính diện tích tính hình tròn
+    function sTron(r){
+        let pi = Math.PI;
+        let s = Math.pow(r,2) * pi;
+        return s;
+    }
+    console.log(`Diện tích hình tròn là : ${sTron(2)}`);
+    //bt3: Tính diện tích tính hình tam giác
+    function sTamGiac(a,h){
+        let s = ((1/2) * a) *h;
+        return s
+    }
+    console.log(`Diện tích hình tam giác là : ${sTamGiac(5,4)}`);
+</script>
 
 </html>
