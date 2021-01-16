@@ -76,6 +76,35 @@
     } else {
         console.log('bạn toàn nặng hơn minh')
     }
+
+    // Bài tập về nhà: 
+        // Tạo biến và tính diện tích or chu vi or cả hai hình vuông, chữ nhật, hình tròn, tam giác. và hiển thị
+        // dienj tích ra màn hình console.
+    //bt1: Tính diện tích tính hình vuông
+    function sVuong(a){
+        let s = a * a;
+        return s;
+    }
+    console.log(`Diện tích hình vuông là : ${sVuong(5)}`);
+    //bt2: Tính diện tích tính hình chữ nhật
+    function sChuNhat(a,b){
+        let s = a * b 
+        return s 
+    }
+    console.log(`Diện tích hình chữ nhật là : ${sChuNhat(5,2)}`);
+    //bt3: Tính diện tích tính hình tròn
+    function sTron(r){
+        let pi = Math.PI;
+        let s = Math.pow(r,2) * pi;
+        return s;
+    }
+    console.log(`Diện tích hình tròn là : ${sTron(2)}`);
+    //bt3: Tính diện tích tính hình tam giác
+    function sTamGiac(a,h){
+        let s = ((1/2) * a) *h;
+        return s
+    }
+    console.log(`Diện tích hình tam giác là : ${sTamGiac(2,4)}`);
 </script>
 
 </html>
