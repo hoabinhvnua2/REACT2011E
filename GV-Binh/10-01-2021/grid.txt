@@ -8,7 +8,7 @@ grid: thì chia layout theo cả ngang và dọc, chia layout theo dạng vùng 
 
 Tìm hiểu về từng thuộc tính của grid:
 - grid-template-columns: chia bố cục layout theo chiều ngang
-- grid-template-rows: chia bố cục layout theo chiều dọc7777777
+- grid-template-rows: chia bố cục layout theo chiều dọc
 
 - grid-column-start: vị trí bắt đầu của 1 khối trên line dọc 
 - grid-column-end: vị trí kết thúc của 1 khối trên line dọc 
