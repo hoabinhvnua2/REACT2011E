@@ -1,0 +1,72 @@
+Các kiểu dữ liệu nguyên thủy trong javascript
+    Trong js có 7 kiểu dữ liệu nguyên thủy:
+    1. Int (số)
+    2. string (chuỗi)
+    3. boolean(logic)
+    4. BigInt()
+    5. object (array hoặc object)
+    6. null
+    7. undefine
+
+    - kiểu Int dùng để định nghĩa các biến có value là số
+    var number = '20';
+    -> convert sang number: Number(number);
+    js cung cấp cho chúng ta 1 đối tượng Math.
+    để làm tròn 1 số 3.1 
+    3 -> Math.floor
+    4 -> Math.ceil
+
+    - Một số hàm 
+        + parseInt: convert 1 chuỗi sang 1 số nguyên
+        + parseFloat: convert 1 chuỗi sang 1 số thực
+        + Math.floor: làm tròn số xuống
+        + Math.ceil: làm tròn số lên
+        + Math.random: lấy ngẫu nhiên 1 số nào đó
+
+    - Tip trick: để convert 1 chuỗi sang 1 số nhanh chũng ta sẽ sử dụng dấu + đằng trước biến
+-> Chú ý "+" dùng để nối chuỗi.
+    Chú ý: để kiểm tra kiểu dữ liệu của 1 biến chúng ta dùng hàm typeof 
+
+    - kiểu string: nó là các ký tự đuowcj lưu trữ dưới dạng chuỗi
+        + let b = "xin chào các bạn lớp react!";
+    - ký tự đặc biệt: 
+        + \n
+        + \', \"
+    - để lấy đưcọ độ dài của 1 chuỗi thì chúng ta sử dụng property: length
+    - truy cập vào ký tự của chuỗi: b[0]
+    - Một số hàm làm việc vs string: 
+        + toLowerCase(): chuyển thành chữ thường
+        + toUpperCase(): chuyển thành chuỗi hoa
+        + indexOf(): tìm kiếm 1 từ hoặc chuỗi trong chuỗi nếu có thì trả về giá trị(vị trí đầu tiên mà nó tìm thấy),
+            nếu ko tìm thấy thì giá mặc định trả về -1
+        + slice(): lấy ra 1 chuỗi con, nhận vào 2 tham số là start và end
+        + substring(): lấy ra 1 chuỗi con, nhận vào 2 tham số là start và end, tuy nhiên substring có thể nhận start > end
+        + substr(): lấy ra 1 chuỗi con, nó nhận vào 2 tham, tham số thứ nhất là start, tham sô thứ 2 là length
+    - Array: là một mảng chứa các item, chỉ số của nó bắt bằng số 0
+        var arr = [1];
+        var arr1 = new Array();
+        var daChieu = [1,2, [6,7,8], [3,5]];
+
+    - Một số phương thức trong mảng
+        // thêm/xóa phần tử trong mảng
+        + push(): thêm phần tử vào cuối mảng
+        + pop(): xóa phần tử trong mảng
+        + unshift(): thêm phần tử vào vị trí đầu tiên trong mảng
+        + shift(): xóa phần tử đầu tiên trong mảng
+        + splice(): xóa phần tử trong mảng, nó nhận vào 3 tham số 
+            thứ 1: là vị trí bắt đầu của item cần xóa
+            thứ 2: số lượng cần xóa
+            thứ 3: bổ sung item cho mảng vừa xóa
+        + slice(): trả về 1 bản sao, nhận vào 2 tham số start và end
+        + concat(): gộp các mảng lại với nhau và tạo ra 1 mảng mới ko ảnh hưởng tới các mảng cũ
+       // tìm kiểm phần tử trong mảng
+        + indexOf/lastIndexOf: trả về giá trị đầu tìm thấy/ trả về giá trị cuối cùng tìm thấy
+        + includes: trả về true nếu có giá trị và trả về false nếu ko co giá trị
+        + find/filter
+        // chuyển đổi mảng
+        + sort: 
+        + map: 
+        + reverse: 
+        + reduce:
+
+        -> để các kiểm tra xem 1 biến có phải là mảng hay ko thì isArray()

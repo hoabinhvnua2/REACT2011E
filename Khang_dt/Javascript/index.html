@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //BT1: Dien tich hinh vuong:
+       areaSquare = edge => {
+           return edge * edge
+       }
+       console.log(`Dien tich hinh vuong voi canh 5 la: ${areaSquare(5)}`)
+       console.log(`Dien tich hinh vuong voi canh 10 la: ${areaSquare(10)}`)
+       console.log(`-------------------------------------------------------`)
+       //BT2: Dien tich hinh chu nhat:
+       areaRectangle = (length,width) => {
+           return length * width
+       }
+       console.log(`Dien tich hinh chu nhat voi chieu dai 3, chieu rong 4 la: ${areaRectangle(3,4)}`)
+       console.log(`-------------------------------------------------------`)
+       //BT3: dien tich hinh tron:
+       areaCircle = r => {
+           const pi = Math.PI
+           return Math.pow(r,2) * pi 
+       }
+       console.log(`Dien tich hinh tron voi ban kinh 2 la: ${areaCircle(2)}`)
+       console.log(`-------------------------------------------------------`)
+       //BT4 dien tich hinh tam giac: 
+       areaTriangle = (a,h) => {
+           return a * h / 2
+       }
+       console.log(`Dien tich hinh tam giac voi canh day 2 va chieu cao 3 la: ${areaTriangle(2,3)}`)
+    </script>
+</body>
+</html>
