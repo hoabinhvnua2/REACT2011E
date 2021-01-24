@@ -70,3 +70,5 @@ Các kiểu dữ liệu nguyên thủy trong javascript
         + reduce:
 
         -> để các kiểm tra xem 1 biến có phải là mảng hay ko thì isArray()
+
+        ---> nói với Day 10
