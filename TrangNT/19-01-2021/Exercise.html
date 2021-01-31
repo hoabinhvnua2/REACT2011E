@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!-- - Bài tập:
+Cho một mảng giá trị như sau [1, 2, 3, 4, 5]:
+        a, tính tổng giá trị của mảng bằng 2 cách
+        b, in ra sô nhỏ nhất của mảng
+        c, in ra số lớn nhất của mảng
+        d, sắp xếp lại mảng
+        e, in ra các số chẵn
+        f, in ra cá số lẻ
+        g, in ra mảng mới có giá trị gấp 2 mảng hiện tại -->
+
+<script>
+
+// a, tính tổng giá trị của mảng bằng 2 cách
+// Cách 1:
+var arr = [1, 2, 3, 4, 5];
+        let sum1 = arr.reduce((tong, item,) => tong + item, 0);
+        console.log('Sum of array C1: ', sum1);
+
+// Cách 2:
+let sum2 = 0;
+for(let i=0; i<arr.length; i++){
+    sum2 += arr[i];
+}
+console.log('Sum of array C2: ', sum2);
+
+// Cách 3
+let sum3 = 0;
+arr.forEach(element => {
+    sum3 += element;
+});
+console.log('Sum of array C3: ', sum3);
+
+// b, in ra sô nhỏ nhất của mảng
+let min = arr[0];
+for(let i = 0; i<arr.length; i++){
+    if(min > arr[i]){
+        min = arr[i];
+    }
+}
+console.log('Min of array: ', min);
+
+// c, in ra sô lớn nhất của mảng
+let max = arr[0];
+for(let i = 0; i<arr.length; i++){
+    if(max < arr[i]){
+        max = arr[i];
+    }
+}
+console.log('Max of array: ', max);
+
+// d, sắp xếp lại mảng
+function compare(a, b) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  return 0;
+}
+  console.log('Sort the array in ascending order: ', arr.sort(compare));
+  console.log('Sort the array in descending order: ', arr.reverse(compare));
+
+//   e, in ra các số chẵn
+// let arrEvenNumber = [];
+// let evenNumber;
+// for(let i = 0; i<arr.length; i++){
+//     if(arr[i] % 2 == 0){
+//         evenNumber = arr[i];
+//         arrEvenNumber.unshift(evenNumber);
+//     }  
+// }
+// console.log('Even numbers: ', arrEvenNumber);
+
+let arrEvenNumber = arr.filter(evenNumber => evenNumber % 2 === 0);
+           console.log('Even numbers: ', arrEvenNumber);
+
+
+// f, in ra cá số lẻ
+let arrOddNumber = arr.filter(oddNumber => oddNumber % 2 === 1);
+           console.log('Odd numbers: ', arrOddNumber);
+
+
+// g, in ra mảng mới có giá trị gấp 2 mảng hiện tại
+let arrNew = [];
+for(let i=0; i< arr.length; i++){
+    
+    arrNew.unshift(arr[i]*2);
+}
+console.log('New array: ', arrNew);
+
+
+</script>
+</body>
+
+</html>
