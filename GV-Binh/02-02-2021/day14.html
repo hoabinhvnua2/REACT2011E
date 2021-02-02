@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="getId">Xin chào </p>
+
+    <button onclick="showName('React')">thêm mới</button>
+
+    <div>
+      <p>bộ chọn querySelectorAll</p>
+      <ul>
+        <li>The</li>
+        <li>test</li>
+      </ul>
+      <ul>
+        <li>has</li>
+        <li>passed</li>
+      </ul>
+    </div>
+
+    <input type="text" value="" id="numberOne" oninput="congOne()"/>
+    <input type="text" value="" id="numberTwo" />
+
+    <input type="text" name="" id="result">
+
+    <select name="" id="selector1" onchange="congOne()">
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <button class="ght rty active" onclick="myChange(event)" name="cong">
+      +
+    </button>
+    <button class="ght rty" onclick="myChange(event)" name="tru">-</button>
+    <button class="ght rty" onclick="myChange(event)" name="nhan">*</button>
+    <button class="ght rty" onclick="myChange(event)" name="chia">/</button>
+
+    <script>
+      let getId = document.getElementById('getId');
+      let numberOne = document.getElementById('selector1');
+      let result = document.getElementById('result');
+      result.value = 5;
+      function congOne(params) {
+        console.log(numberOne.value);
+      }
+
+      // C1:
+
+    //   document.getElementById('getId').addEventListener('click', function () {
+    //       alert('xin chào');
+    //   })
+
+      // C2:
+
+      function showName(uName) {
+
+        getId.innerHTML += uName;
+          console.log(uName);
+      }
+
+      let elements = document.querySelectorAll("ul > li:last-child");
+      let element = document.querySelector("ul > li:last-child");
+
+      console.log(elements[0]);
+      console.log(element);
+
+      let cong = document.getElementById("numberOne");
+
+      cong.oncopy = function all() {
+        console.log("aa");
+        return false;
+      };
+
+      for (let elem of elements) {
+        console.log(elem.innerHTML); // "test", "passed"
+      }
+
+      function myChange(event) {
+        let ass = document.querySelectorAll("button");
+        console.log(event);
+        // console.log(ass);
+
+        // for (let as of ass) {
+        //     console.log(as.className);
+        //     if (as.getAttribute('name') === event.target.name) {
+        //         return false;
+        //     } else {
+        //         // as.className.remove('active');
+        //         event.classList.add('active');
+        //     }
+        // }
+
+        for (let index = 0; index < ass.length; index++) {
+          7;
+          ass[index].classList.remove("active");
+          event.target.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
