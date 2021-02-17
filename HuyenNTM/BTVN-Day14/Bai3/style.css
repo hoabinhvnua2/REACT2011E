@@ -1,0 +1,7 @@
+#containerForm {
+    margin: 50px;
+}
+
+.errorMessage {
+    color: red;
+}
