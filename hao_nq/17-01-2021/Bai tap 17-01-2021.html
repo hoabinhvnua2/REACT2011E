@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //Chi so BMI
+    console.log('Bai 1:')
+    let cM = 170;
+    let nM = 65;
+    let cT = 150;
+    let nT = 50;
+    let BMIM = (nM / cM) * 2;
+    let BMIT = (nT / cT) * 2;
+    console.log("BMI cua Minh: ", BMIM);
+    console.log("BMI cua Toan: ", BMIT);
+    if (BMIM > BMIT) {
+      console.log("Minh hon Toan");
+    } else if (BMIT > BMIM) {
+      console.log("Toan hon Minh");
+    } else console.log("Bang nhau");
+    //Tinh dien tich
+    console.log('Bai 2:')
+    let cHV = 3,
+      dHCN = 5,
+      rHCN = 2,
+      rHT = 4,
+      cHTG = 3,
+      dHTG = 8;
+    const PI = 3.14;
+    console.log('Dien tinh hinh vuong: ', cHV * cHV);
+    console.log('Dien tinh hinh chu nhat: ', rHCN * dHCN);
+    console.log('Dien tinh hinh tron: ', rHT * rHT * PI);
+    console.log('Dien tinh hinh tam giac: ', (cHTG * dHTG) / 2);
+  </script>
+</body>
+
+</html>
