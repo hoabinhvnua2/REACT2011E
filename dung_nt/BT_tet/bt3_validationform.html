@@ -1,0 +1,51 @@
+<!-- Bài 3: Viết hàm validate cho form mẫu sau, với cái điều kiện
+1.	First name và last name ko đc để trống, không nhỏ hơn 2 ký tự và ko quá 30 ký tự
+2.	Email ko đc để trống và đúng định dạng email
+3.	Password ko đc để trống và phải có ít nhất 6 ký tự
+4.	Confirm pass phải khớp với password
+5.	Thành phố ko đc để trống
+6.	Năm sinh ko đc để trống -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bai Tap tet ReactJS</title>
+        <link type="text/css" rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <form onsubmit="return(register(event))">
+            <legend> Form đăng kí tài khoản </legend>
+            <label for="first_name" >Tên: </label>
+            <input class="txt" type="text" id="txtFirstName" name="first_name" value="" placeholder="Nhập tên của bạn" >
+            
+            <label for="last_name" >Họ: </label>
+            <input class="txt" type="text" id="txtLastName" name="last_name" value="" placeholder="Nhập họ của bạn" >
+            
+            <label for="email" >Email: </label>
+            <input class="txt txtEmail" type="text" id="txtEmail" name="email" value="" placeholder="Nhập email của bạn">
+            
+            <label for="password" >Password: </label>
+            <input class="txt txtPassword" type="password" id="txtPassWord" name="password" value="" placeholder="Nhập password của bạn">
+            
+            <label for="confirm_password" >Comfirm Password: </label>
+            <input class="txt txtCfmPass" type="password" id="txtCfmPass" name="cfmpass" value="" placeholder="Nhập lại password của bạn">
+           
+            <label for="city" >Thành phố: </label>            
+            <select class="txt" id="slcCity" name = "City">
+                <option value = "-1" selected>Chọn thành phố của bạn</option>
+                <option value = "1">TP.HCM</option>
+                <option value = "2">Ha Noi</option>
+                <option value = "3">Da Nang</option>
+            </select> 
+            
+            <label for="dob" >Năm sinh: </label>
+            <input class="txt dob" type="text" id="txtDob" name="dob" value="" placeholder="Nhập năm sinh của bạn" >
+            <br>
+            <button class="bnt" type="submit" id="bntSubmit" value="Submit" > Submit </button>
+
+
+            <script src="./validation_form.js"></script>
+        </form>
+    </body>
+</html>
