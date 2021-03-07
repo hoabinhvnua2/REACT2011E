@@ -1,0 +1,95 @@
+@import './styles/color';
+// viết the css
+// .container {
+//   border: 1px solid green;
+//   background-color: yellow;
+// }
+
+// .container p {
+//   color: red;
+// }
+
+// .color {
+//   color: red;
+// }
+
+// sử dụng mixin để xử bài toán phức tạp hơn
+// @mixin colorText($bien) {
+//   color: $bien;
+// }
+
+
+// sử dụng @function
+@function colorName($bien) {
+  @if $bien == blue {
+    @return blue;
+  } @else {
+    @return #fff;
+  }
+
+ 
+}
+
+// viết theo scss nesting 
+.container {
+  border: 3px solid $colorGreen;
+  background-color: $colorPrimary;
+
+  // p {
+  //   color: colorName(blue);
+  // }
+
+  span {
+    color: colorName(red);
+  }
+}
+
+// .padding-10 {
+//   padding: 10px;
+// }
+// .padding-11 {
+//   padding: 11px;
+// }
+// .padding-12 {}
+// .padding-13 {}
+// .padding-14 {}
+// .padding-15 {}
+$length: 9;
+@for $i from 1 to $length {
+  @if $i%2 == 0 {
+    .item-#{$i} {
+      color: red;
+    }
+  }
+}
+
+$giaTri: 10px, 20px, 30px, 40px;
+
+@each $i in $giaTri {
+  .padding-#{$i} {
+    padding: $i;
+  }
+}
+
+
+
+.header {
+  border: 3px solid green;
+  &__title {
+    color: red;
+    &.-font-size {
+      font-size: 30px;
+    }
+  }
+  &__cotent {
+
+  }
+
+  &.-background {
+      background-color: greenyellow;
+    }
+}
+
+// .app--modifier {
+//   background-color: greenyellow;
+// }
