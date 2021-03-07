@@ -87,7 +87,7 @@ class myClass {
 };
 
 let sping = new myClass("sang");
-console.log(sping);
+
 
 class myClass2 extends myClass {
     constructor(ten,ho, myid) {
@@ -100,12 +100,12 @@ class myClass2 extends myClass {
         this.myid = myid;
     }
     
-    showInfo() {
+    showInfo () {
         console.log(this);
     }
 };
 let spring_1 = new myClass2( "phuc","tran",123);
-console.log(spring_1);
+spring_1.showInfo();
 
 
 console.log("test------super");
