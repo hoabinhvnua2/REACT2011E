@@ -1,1 +1,0 @@
-Những cái còn yếu là: mới học từ đầu nên quá nhiều thứ còn chưa biết
