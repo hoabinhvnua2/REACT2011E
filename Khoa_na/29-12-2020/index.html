@@ -93,7 +93,7 @@
         <div class="box flex-1 text-center mr">A</div> 
     </div>
     <div class="container mt">
-        <div class="box flex-1 text-center mr b-color-red order-3" >1</div>
+        <div id="getByID" class="box flex-1 text-center mr b-color-red order-3" >1</div>
         <div class="box flex-1 text-center mr b-color-yellow order-1">2</div>
         <div class="box flex-1 text-center mr b-color-blue order-4">3</div>
         <div class="box flex-1 text-center mr b-color-green order-2">4</div>
@@ -103,6 +103,12 @@
         <div class="box flex-3 text-center mr b-color-aqua">5</div>
         <div class="box flex-1 text-center mr b-color-yellow">6</div>
          <!-- Lỗi không đều nhau là do flex để thuộc tính flex-basic là auto nên dòng trên mất 15px để canh lề mà dong dưới chỉ mất 5px nên dẫn đến lệch nhau 10px -->
-</div>
+    </div>
+    <script>
+        let a = document.getElementById('getByID');
+        a.addEventListener('click', function () {
+            alert("XIn chao");
+        });
+    </script>
 </body>
-</html>
+</html> 
