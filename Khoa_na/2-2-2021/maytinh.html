@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="One" type="text" />
+    <input id="Two" type="text" />
+    <br />
+    <br />
+
+    <button onclick="cong(event)">+</button>
+    <button onclick="tru()">-</button>
+    <button onclick="nhan()">*</button>
+    <button onclick="chia()">/</button>
+    <br />
+    <br />
+    <output id="resuft"></output>
+
+    <script>
+      let calculation = document.getElementsByTagName("button");
+      let leng = calculation.length;
+      let one = document.getElementById("One");
+      let two = document.getElementById("Two");
+      let resuft = document.getElementById("resuft");
+      function cong() {
+        let One = one.value;
+        let Two = two.value;
+        let total = parseInt(One) + parseInt(Two);
+        resuft.value = total;
+        for(let i = 0; i<leng; i++){
+          calculation[i].classList.remove('active');
+        }
+        calculation[0].classList.add('active');
+      }
+      function tru() {
+        let One = one.value;
+        let Two = two.value;
+        let total = parseInt(One) - parseInt(Two);
+        resuft.value = total;
+        for(let i = 0; i<leng; i++){
+          calculation[i].classList.remove('active');
+        }
+        calculation[1].classList.add('active');
+      }
+      function nhan() {
+        let One = one.value;
+        let Two = two.value;
+        let total = parseInt(One) * parseInt(Two);
+        resuft.value = total;
+        for(let i = 0; i<leng; i++){
+          calculation[i].classList.remove('active');
+        }
+        calculation[2].classList.add('active');
+      }
+      function chia() {
+        let One = one.value;
+        let Two = two.value;
+        let total = parseInt(One) / parseInt(Two);
+        resuft.value = total;
+        for(let i = 0; i<leng; i++){
+          calculation[i].classList.remove('active');
+        }
+        calculation[3].classList.add('active');
+      }
+         
+    </script>
+  </body>
+</html>

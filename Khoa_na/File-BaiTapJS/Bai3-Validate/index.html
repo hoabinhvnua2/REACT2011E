@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form onsubmit="register(event)">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstname">First name</label>
+            <input type="text" class="form-control" id="firstname" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastname">last name</label>
+            <input type="text" class="form-control" id="lastname" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputAddress"
+            placeholder="abc123@gmail.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputPasswork">Passwork</label>
+          <input type="password" class="form-control" id="inputPasswork" />
+          <label for="confirmPasswork">Confirm Passwork</label>
+          <input type="password" class="form-control" id="confirmPasswork" />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" />
+          </div>
+          <div class="form-group col-md-2 offset-md-3">
+            <label for="inputYearOfBirth">Year of birth</label>
+            <select id="inputYearOfBirth" class="form-control">
+              <option selected>2021</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+              <option>2003</option>
+              <option>2004</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+    <script>
+      let firstName = document.getElementById("firstname");
+      let email = document.getElementById("inputAddress");
+      let lastName = document.getElementById("lastname");
+      let pass = document.getElementById("inputPasswork");
+      let city = document.getElementById("inputCity");
+      let year = document.getElementById("inputYearOfBirth");
+      let confirmPass = document.getElementById("confirmPasswork");
+      let minLeng = 2;
+      let maxLeng = 30;
+      function register(event) {
+        event.preventDefault(event);
+        if (firstName < 2 || firstName > 30) {
+          alert("Vui lòng nhập lai tên");
+          firstName.focus();
+          return false;
+        }
+        if (lastName < 2 || lastName > 30) {
+          alert("Vui lòng nhập lai tên");
+          firstName.focus();
+          return false;
+        }
+        if (firstName.value === "") {
+          alert("Xin hãy nhập tên");
+          firstName.focus();
+          return false;
+        }
+        if (lastName.value === "") {
+          alert("Xin hãy nhập tên");
+          lastName.focus();
+          return false;
+        }
+        if (email.value === "") {
+          alert("Xin hãy nhập lại mail");
+          lastName.focus();
+          return false;
+        }
+        if (city.value === "") {
+          alert(
+            "Bạn hãy vui lòng cho chúng tôi xin thông tin về thành phố nơi mà bạn đang sinh sống"
+          );
+          lastName.focus();
+          return false;
+        }
+        if (year.value === "") {
+          alert("Xin hãy nhập năm sinh của bạn");
+          lastName.focus();
+          return false;
+        }
+        if (pass.value != confirmPass.value) {
+          alert("Vui lòng nhập cho đúng với mật khẩu đã nhập");
+          confirmPass.focus();
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
