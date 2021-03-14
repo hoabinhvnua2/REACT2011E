@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bài 5: slider</title>
+</head>
+
+<body>
+    <div id="slider"></div>
+    <div id="sliderNav">
+        <div id="btnBack" onclick="backSlide()">
+            <img src="https://nguyenvanhieu.vn/wp-content/uploads/2020/09/left-arrow.png">
+        </div>
+        <div id="btnNext" onclick="nextSlide()">
+            <img src="https://nguyenvanhieu.vn/wp-content/uploads/2020/09/right-arrow.png">
+        </div>
+    </div>
+
+    <div id="slidePage" onclick="nextSlide()"></div>
+    <div>
+        <button onclick="changeSlide('0')" id="0" class="change-color">1</button>
+        <button onclick="changeSlide('1')" id="1" class="change-color">2</button>
+        <button onclick="changeSlide('2')" id="2" class="change-color">3</button>
+        <button onclick="changeSlide('3')" id="3" class="change-color">4</button>
+    </div>
+    <script src="slider2.js"></script>
+</body>
+
+</html>
