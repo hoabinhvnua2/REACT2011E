@@ -106,6 +106,8 @@ class App extends Component {
     const { isShow, validated, products } = this.state;
     return (
       <>
+      
+
         {/* Alert là 1 function component */}
         <Alert subject="Angular" age="20" />
         <Button

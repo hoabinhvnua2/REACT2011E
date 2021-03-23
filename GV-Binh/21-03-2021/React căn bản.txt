@@ -1,0 +1,45 @@
+Higher-Order Components: 
+    tạo ra 1 component và tham số đầu vào là 1 component sau đó trả ra 1 compnent
+
+    Bài toán: 
+        yêu cầu 1: click vào edit 1 user thì cần show modal
+        yêu cầu 2: xem chi tiết 1 user vẫn cần show modal
+
+        Viết ra 1 component sau nhận tham số đầu vào là 1 component và trả ra 1 COMPONENT
+
+
+        B1: Tạo ra 1 component withModal và nó nhận vào 1 component và trả ra 1 component
+
+        const withModal = (wrapComponent) => {
+
+            return (
+                //đây là modal
+                // nội dung của modal
+                <wrapComponent data={}/>
+            )
+        }
+
+
+
+Higher-Order function:
+    tạo ra 1 function nhận tham số đầu vào là 1 function sau đó 
+    hoặc là trả về 1 function 
+    hoặc là trả về giá
+
+    var arr = [1,2,3,4]
+    arr.reduce((acc, value) => {
+        return acc + value
+    })
+
+    B1: tạo 1 function nhận vào tham sô là 1 function
+    B2: gọi cái function đó
+
+    function showName(firstName) {
+        console.log('xin chào' + firstName);
+    }
+
+    function wrapFunction(fn) {
+        const user = 'Binh';
+
+        return fn(user)
+    }
