@@ -1,33 +1,54 @@
-import React, { Component } from "react";
-import { Table } from "react-bootstrap";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ProductLists extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+
+  showNane = () => {}
+
+  componentWillMount() {
+
+  }
+
+  componentDidMount() {
+
+  }
+
+  componentWillReceiveProps(nextProps) {
+
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+
+  }
+
+  componentWillUnmount() {
+
+  }
+
   render() {
-    const { products } = this.props;
     return (
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>STT</th>
-            <th>Tên sản phẩm</th>
-            <th>Số lượng SP</th>
-            <th>Giá SP</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products &&
-            products.map((product, index) => (
-              <tr key={index.toString()}>
-                <td>{index + 1}</td>
-                <td>{product.product_name}</td>
-                <td>{product.quantity}</td>
-                <td>{product.price}</td>
-              </tr>
-            ))}
-        </tbody>
-      </Table>
+      <div>
+
+      </div>
     );
   }
 }
+
+ProductLists.propTypes = {
+
+};
 
 export default ProductLists;

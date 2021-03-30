@@ -1,0 +1,73 @@
+Tổng hợp cuối khóa
+    - HTML:
+        + Cách sử dụng thẻ
+        + thẻ block và thẻ inline
+        + các thẻ semantic -> hỗ trợ tốt cho SEO
+    - CSS:
+        + Nắm được độ ưu tiên trong style
+        + Nắm đưuọc các bộ chọn
+        + Nắm đưuọc các thuộc tính quan trọng
+        + Hiểu đưuọc về Flex và Grid, sử được bootstrap
+        + Nắm đưuọc kiến thức về SASS, SCSS và chuẩn BEM
+    - JAVASCRIPT:
+        + các khai báo biến và hằng
+        + variable scope, function scope, closure(lexical scope)
+        + Các kiểu dữ liệu nguyên thủy
+        + Nắm được các hàm về xử lý string, array, object
+        + Nắm được kiến thức về các lệnh rẽ nhánh và vòng lặp
+        + Nắm được kiến thức về hàm contructor và prototype và class
+        + Nắm được kiến thức hàm nâng cao (HOF, đệ quy, arrow function, generator function)
+        + Hiểu được cơ chế Event loop
+        + Nắm được kiến thức về xử lý các tác vụ bất động bộ(call back, promise, async và await)
+        + Năm được kiến thức về DOM và tương tác với DOM (tương tác với form dữ liệu)
+    - REACTJS:
+        + Hiểu được cơ chế của DOM ảo
+        + Hiểu được cơ chế của việc render và re-render
+        + Hiểu được về state và props
+        + Nắm được các lifecycle của class component
+        + Hiểu được cơ chế của việc setState
+        + Hiểu được Hook và cơ chế của Hook
+        + Nắm được HOC
+        + Nắm được khái niệm và cơ chế hoạt động của Redux
+        + Nắm được cơ chế hoạt động của midleware (redux-thunk, redux-saga, redux-observable)
+        + Hiểu và sử đụng được react-router-dom, Yup, Formik...
+
+
+
+
+Bài toán về clousure:
+    có 1 ô text để search 
+    lần 1 gõ chữ 'ab' -> debound(800) ->  call 1 API vs từ khóa là 'ab' -> kết quả trả về sau lần call 2
+    lần 2 gõ chữ 'abc' -> debound(800) ->  call 1 API vs từ khóa là 'abc' -> kết quả của APi này trả về trước lần call 1
+
+    mong muốn tìm đưuọc tất cả các từ có từ kháo 'abc'
+    -> cách xử lý là dùng closure.
+
+    function call(unique) {
+        let uni = unique;
+        function goi() {
+            let now = new Date()
+            if(uni === now) {
+
+            }
+        }
+    } 
+
+    call(1617110230143)
+    call(1617110230153)
+
+    this.state = {
+        count: 1
+    }
+
+    // CLASS component
+    this.setState({
+        count: 1
+    })
+    chạy setState 5 lần thì trên giao diện re-render mấy lần? => 5
+
+
+    //Hook
+    const [count, setCount] = useState({})
+    setCount({})
+    chạy setCount(1) 5 lần thì giao diện re-render bao nhiêu lần; -> tối đa 2 lần

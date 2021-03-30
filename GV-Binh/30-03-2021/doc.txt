@@ -1,0 +1,14 @@
+-Các chức gồm có: 
+    + sign-in
+    + sign-out
+    + sign-up
+    + CRUD tasks
+    + CRDU user
+    + sign-in with facebook
+
+-Chi tiết
+    + Xây dựng giao diện với material-ui
+    + Áp dụng react-router-dom để điều hướng trang
+    + Áp dụng redux vào quản lý state
+    + Áp dụng redux-saga vào hỗ trợ xử lý side-effect
+    + Áp dụng Yup, React-hook-form hoặc Formik
