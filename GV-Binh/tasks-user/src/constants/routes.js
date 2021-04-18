@@ -4,12 +4,12 @@ import Tasks from "../component/Tasks";
 const routes = [
     {
         path: '/user',
-        component: Users,
+        component: () => <Users />,
         exact: true
     },
     {
         path: '/task',
-        component: Tasks,
+        component: () => <Tasks />,
         exact: true
     }
 ];

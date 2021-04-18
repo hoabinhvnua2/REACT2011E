@@ -1,0 +1,1 @@
+export const REAL_API = 'https://6050aa4a5346090017670332.mockapi.io/';

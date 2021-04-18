@@ -12,7 +12,7 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import IconButton from "@material-ui/core/IconButton";
 import useStyles from "./style";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import routes from '../constants/routes';
+import routes from "../constants/routes";
 
 const SildeBar = ({ open }) => {
   const classes = useStyles();
@@ -57,20 +57,17 @@ const SildeBar = ({ open }) => {
         </List>
       </Drawer>
       <main className={classes.content}>
-      <div className={classes.toolbar} />
-      <Switch>
-        {
-          routes.map((route, index) => (
-            <Route 
+        <div className={classes.toolbar} />
+        <Switch>
+          {routes.map((route, index) => (
+            <Route
               key={index.toString()}
               path={route.path}
               exact={route.exact}
               children={route.component}
-              
             />
-          ))
-        }
-      </Switch>
+          ))}
+        </Switch>
       </main>
     </Router>
   );

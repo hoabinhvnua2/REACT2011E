@@ -6,15 +6,16 @@ import SignIn from "./component/SignIn";
 import SignUp from "./component/SignUp";
 import PrivateAuth from "./component/PrivateAuth";
 import NoMatch from "./component/PageNot";
+import Users from "./component/Users";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/sign-in" component={SignIn} />
+        <PrivateAuth exact path="/" component={Layout} />
         <Route path="/sign-up" component={SignUp} />
-        <PrivateAuth path="/home" component={Layout} />
-        <Route path="*"> <NoMatch /> </Route>
+        <Route path="/sign-in" component={SignIn} />
+        {/* <Route path="*"> <NoMatch /> </Route> */}
       </Switch>
     </Router>
   );
