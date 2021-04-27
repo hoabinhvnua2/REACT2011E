@@ -19,6 +19,10 @@ const style = (theme) => ({
     margin: theme.spacing(3, 0, 2),
     backgroundColor: COLORS.primary
   },
+  wrapPaper: {
+    borderTop: '1px solid green',
+    borderRadius: '50%'
+  }
 });
 
 export default style;

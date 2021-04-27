@@ -9,14 +9,37 @@ import TextField from "@material-ui/core/TextField";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Checkbox from "@material-ui/core/Checkbox";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import style from './style';
+import style from "./style";
 import { withStyles } from "@material-ui/core";
-
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useRegister } from "../../redux/hooks/Register";
 
 const SignUp = ({ classes }) => {
+  const { registers, actions } = useRegister();
+
+  console.log(registers);
+  const validationSchema = yup.object().shape({
+    firstName: yup.string().required("This is required!"),
+    lastName: yup.string().required("This is required!"),
+    username: yup.string().required("This is required!"),
+    password: yup.string().required("This is required!"),
+  });
+
+  const { register, handleSubmit, reset, formState } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
+  const { errors } = formState;
+
+  const submit = (data) => {
+    console.log(data);
+    actions.register(data);
+  };
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -27,12 +50,19 @@ const SignUp = ({ classes }) => {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form
+          className={classes.form}
+          noValidate
+          onSubmit={handleSubmit(submit)}
+        >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
-                autoComplete="fname"
                 name="firstName"
+                error={errors?.firstName ? true : false}
+                {...register("firstName")}
+                helperText={errors?.firstName?.message}
+                autoComplete="fname"
                 variant="outlined"
                 required
                 fullWidth
@@ -49,6 +79,9 @@ const SignUp = ({ classes }) => {
                 id="lastName"
                 label="Last Name"
                 name="lastName"
+                error={errors?.lastName ? true : false}
+                {...register("lastName")}
+                helperText={errors?.lastName?.message}
                 autoComplete="lname"
               />
             </Grid>
@@ -59,7 +92,10 @@ const SignUp = ({ classes }) => {
                 fullWidth
                 id="email"
                 label="Email Address"
-                name="email"
+                name="username"
+                error={errors?.username ? true : false}
+                {...register("username")}
+                helperText={errors?.username?.message}
                 autoComplete="email"
               />
             </Grid>
@@ -69,6 +105,9 @@ const SignUp = ({ classes }) => {
                 required
                 fullWidth
                 name="password"
+                error={errors?.password ? true : false}
+                {...register("password")}
+                helperText={errors?.password?.message}
                 label="Password"
                 type="password"
                 id="password"
@@ -99,23 +138,18 @@ const SignUp = ({ classes }) => {
             </Grid>
           </Grid>
         </form>
+        {registers.isLoading && (
+          <div className={classes.customSpin}>
+            <div className={classes.dotSpin}></div>
+          </div>
+        )}
       </div>
-      <Box mt={5}>
-        <Typography variant="body2" color="textSecondary" align="center">
-          {"Copyright © "}
-          <Link color="inherit" href="https://material-ui.com/">
-            Your Website
-          </Link>{" "}
-          {new Date().getFullYear()}
-          {"."}
-        </Typography>
-      </Box>
     </Container>
   );
 };
 
 SignUp.propTypes = {
-    classes: PropTypes.shape().isRequired
+  classes: PropTypes.shape().isRequired,
 };
 
 export default withStyles(style)(SignUp);

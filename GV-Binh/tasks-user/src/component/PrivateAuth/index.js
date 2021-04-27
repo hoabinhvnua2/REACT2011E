@@ -5,17 +5,18 @@ import { Redirect, Route } from "react-router";
 PrivateAuth.propTypes = {};
 
 function PrivateAuth({ component: Component, ...rest }) {
-  const [auth, setAuth] = useState(true);
-
   return (
     <Route
       {...rest}
-      render={(props) => {
-        if (!auth) {
-          return <Redirect to={{ pathname: "/sign-in" }} />;
-        }
-        return <Component {...props}/>;
-      }}
+      render={(props) =>
+        localStorage.getItem("user") ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{ pathname: "/sign-in", state: { from: props.location } }}
+          />
+        )
+      }
     />
   );
 }

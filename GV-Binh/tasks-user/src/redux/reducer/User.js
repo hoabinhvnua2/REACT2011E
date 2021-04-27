@@ -12,7 +12,6 @@ const initialState = {
 const user = (state = initialState, action) =>
   produce(state, (draf) => {
     const { type, payload } = action;
-    console.log(payload)
     switch (type) {
       case userAction.GET_USER:
         draf.users.isLoading = true

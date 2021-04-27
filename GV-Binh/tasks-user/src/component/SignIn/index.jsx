@@ -15,9 +15,30 @@ import { withStyles } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { Link } from "react-router-dom";
 import style from "./style";
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
 
-const SignIn = ({ classes }) => {
+const SignIn = () => {
+  const classes =  useStyles()
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -65,11 +86,6 @@ const SignIn = ({ classes }) => {
             Sign In
           </Button>
           <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
             <Grid item>
               <Link to="/sign-up" variant="body2">
                 {"Don't have an account? Sign Up"}
@@ -78,7 +94,7 @@ const SignIn = ({ classes }) => {
           </Grid>
         </form>
       </div>
-      <Box mt={8}>
+      {/* <Box mt={8}>
         <Typography variant="body2" color="textSecondary" align="center">
           {"Copyright © "}
           <Link color="inherit" href="https://material-ui.com/">
@@ -87,11 +103,12 @@ const SignIn = ({ classes }) => {
           {new Date().getFullYear()}
           {"."}
         </Typography>
-      </Box>
+      </Box> */}
     </Container>
   );
 };
 
 SignIn.propTypes = {};
 
-export default withStyles(style)(SignIn);
+
+export default SignIn;

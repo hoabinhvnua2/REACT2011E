@@ -9,9 +9,10 @@ import rootReducer from './redux/reducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga'
 import rootSagas from './redux/sagas';
+import { configureFakeBackend } from './helps/fake-backend';
 
+configureFakeBackend();
 const sagaMiddleware = createSagaMiddleware();
-
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 sagaMiddleware.run(rootSagas)
 
