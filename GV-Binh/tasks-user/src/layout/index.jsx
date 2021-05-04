@@ -15,6 +15,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import SildeBar from "./SildeBar";
+import { authService } from '../services/auth-service';
+import {useAuth} from '../redux/hooks/Auth';
+import { history } from '../helps/history'
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -28,6 +31,7 @@ export default function Layout() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  const { actions } = useAuth()
 
   const handleDrawerToggle = () => {
     setOpen(open ? false : true);
@@ -41,6 +45,12 @@ export default function Layout() {
     setAnchorEl(null);
   };
 
+  const logout = () => {
+    actions.logout();
+    authService.logout();
+    history.push('sign-in')
+    setAnchorEl(null);
+  }
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -82,7 +92,7 @@ export default function Layout() {
             >
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem onClick={logout}>Logout</MenuItem>
             </Menu>
           </div>
         </Toolbar>

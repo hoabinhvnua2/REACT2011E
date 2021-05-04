@@ -21,8 +21,6 @@ import { useRegister } from "../../redux/hooks/Register";
 
 const SignUp = ({ classes }) => {
   const { registers, actions } = useRegister();
-
-  console.log(registers);
   const validationSchema = yup.object().shape({
     firstName: yup.string().required("This is required!"),
     lastName: yup.string().required("This is required!"),
